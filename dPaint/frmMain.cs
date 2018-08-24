@@ -21,12 +21,12 @@ namespace dPaint
         int handelNum = 0;
         Graphics g;
         private Choice select = Choice.None;
-        List<ClsShape> obj = new List<ClsShape>();
+        List<Shape> obj = new List<Shape>();
         Point oldLocation;
-        ClsShape selectShape ;
+        Shape selectShape ;
         Pen pen;
         SolidBrush brush;
-        ClsPencil tempPen;
+        Pencil tempPen;
         bool CTRLpresed ;
         private SelectionMode selectMode = SelectionMode.None;
         private void frmMain_Load(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace dPaint
             Refresh();
             if (select == Choice.Pen)
             {
-                ClsPencil p = new ClsPencil(e.Location, pen, g);
+                Pencil p = new Pencil(e.Location, pen, g);
                 p.Draw();
                 obj.Add(p);
                 tempPen = p;
@@ -153,7 +153,7 @@ namespace dPaint
             if (select == Choice.Rectangle || select == Choice.Squre )//|| select==Choice.Rhom)
             {
                 
-                ClsRecangle s = new ClsRecangle( e.Location,new Point(e.X+ 5,e.Y+ 5), pen, brush, g);
+                Recangle s = new Recangle( e.Location,new Point(e.X+ 5,e.Y+ 5), pen, brush, g);
                 s.Draw();
                 s.DrawHandle();
                 s.Selected = true;
@@ -165,7 +165,7 @@ namespace dPaint
             if (select == Choice.Circle)
             {
 
-                ClsCircle s = new ClsCircle(e.Location, new Point(e.X + 5, e.Y + 5), pen, brush, g);
+                Circle s = new Circle(e.Location, new Point(e.X + 5, e.Y + 5), pen, brush, g);
                 s.Draw();
                 s.DrawHandle();
                 s.Selected = true;
@@ -177,7 +177,7 @@ namespace dPaint
             if (select == Choice.Triangle)
             {
 
-                ClsTriangle s = new ClsTriangle(e.Location, new Point(e.X + 5, e.Y + 5), pen, brush, g);
+                Triangle s = new Triangle(e.Location, new Point(e.X + 5, e.Y + 5), pen, brush, g);
                 s.Draw();
                 s.DrawHandle();
                 s.Selected = true;
@@ -189,7 +189,7 @@ namespace dPaint
             if (select == Choice.Rhom)
             {
 
-                ClsRhomboid s = new ClsRhomboid(e.Location, new Point(e.X + 5, e.Y + 5), pen, brush, g);
+                Rhomboid s = new Rhomboid(e.Location, new Point(e.X + 5, e.Y + 5), pen, brush, g);
                 s.Draw();
                 s.DrawHandle();
                 s.Selected = true;
@@ -202,7 +202,7 @@ namespace dPaint
             if (select == Choice.Line)
             {
 
-                ClsLine s = new ClsLine(e.Location, new Point(e.X + 5, e.Y + 5), pen, g);
+                Line s = new Line(e.Location, new Point(e.X + 5, e.Y + 5), pen, g);
                 s.Draw();
                 s.DrawHandle();
                 s.Selected = true;

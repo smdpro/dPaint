@@ -2,10 +2,10 @@
 using System.Drawing;
 namespace dPaint
 {
-    public class ClsCircle : ClsRecangle
+    public class Circle : Recangle
     {
 
-        public ClsCircle(Point startPoint, Point endPoint, Pen p, SolidBrush b, Graphics g)
+        public Circle(Point startPoint, Point endPoint, Pen p, SolidBrush b, Graphics g)
             : base(startPoint, endPoint, p, b, g)
         {
             rectangle.X = sPoint.X;

@@ -46,14 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsDot.cs" />
-    <Compile Include="ClsCircle.cs" />
-    <Compile Include="ClsLine.cs" />
-    <Compile Include="ClsPencil.cs" />
-    <Compile Include="ClsRhomboid.cs" />
-    <Compile Include="ClsShape.cs" />
-    <Compile Include="ClsRecangle.cs" />
-    <Compile Include="ClsTriangle.cs" />
+    <Compile Include="Dot.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Pencil.cs" />
+    <Compile Include="Rhomboid.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="Recangle.cs" />
+    <Compile Include="Triangle.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

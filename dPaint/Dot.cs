@@ -5,13 +5,13 @@ using System.Text;
 using System.Drawing;
 namespace dPaint
 {
-    public class ClsDot : ClsShape
+    public class Dot : Shape
     {
         /// <summary>
         /// Point for draw
         /// </summary>
         protected Point sPoint;
-        public ClsDot(Point point,Pen pen,Graphics canvas ):base(pen,canvas)
+        public Dot(Point point,Pen pen,Graphics canvas ):base(pen,canvas)
         {
             sPoint = point;
         }

@@ -3,10 +3,10 @@ using System.Drawing;
 
 namespace dPaint
 {
-    public class ClsRecangle : ClsTriangle
+    public class Recangle : Triangle
     {
         
-        public ClsRecangle(Point sPoint, Point ePoint, Pen p, SolidBrush b, Graphics g)
+        public Recangle(Point sPoint, Point ePoint, Pen p, SolidBrush b, Graphics g)
             : base(sPoint, ePoint, p, b, g)
         {
             rectangle.X = sPoint.X;

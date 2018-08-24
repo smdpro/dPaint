@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Windows.Forms;
 namespace dPaint
 {
-    public class ClsTriangle : ClsLine
+    public class Triangle : Line
     {
         //protected SolidBrush brush;
         protected Rectangle rectangle;
         protected Rectangle rectangletmp;
-        public ClsTriangle(Point startPoint, Point endPoint, Pen p, SolidBrush b, Graphics g)
+        public Triangle(Point startPoint, Point endPoint, Pen p, SolidBrush b, Graphics g)
             : base(startPoint, endPoint, p, g)
         {
             

@@ -6,11 +6,11 @@ using System.Drawing;
 
 namespace dPaint
 {
-    public class ClsPencil : ClsDot
+    public class Pencil : Dot
     {
         private Point[] points;
         int count;
-        public ClsPencil(Point point, Pen pen, Graphics canvas)
+        public Pencil(Point point, Pen pen, Graphics canvas)
             : base(point, pen, canvas)
         {
             count = 0;

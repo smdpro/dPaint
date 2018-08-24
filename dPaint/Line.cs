@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 namespace dPaint
 {
-    public class ClsLine : ClsDot
+    public class Line : Dot
     {
         protected Point ePoint;
         public Matrix matrix;
@@ -40,11 +40,7 @@ namespace dPaint
         }
         public virtual Point GetHandle(int handleNumber)
         {
-           
-            if (handleNumber == 1)
-                return sPoint;
-           
-            return ePoint;
+            return handleNumber == 1 ? sPoint : ePoint;
         }
         
         
@@ -59,7 +55,7 @@ namespace dPaint
                     return Cursors.Default;
             }
         }
-        public ClsLine(Point p1,Point p2,Pen p,Graphics g):base(p1,p,g)
+        public Line(Point p1,Point p2,Pen p,Graphics g):base(p1,p,g)
         {
             ePoint = p2;
             matrix = new Matrix();
@@ -82,9 +78,9 @@ namespace dPaint
         }
         public virtual void DrawHandle()
         {
-            SolidBrush tbrush = new SolidBrush(Color.Black);
+            var tbrush = new SolidBrush(Color.Black);
 
-            for (int i = 1; i <= HandleCount; i++)
+            for (var i = 1; i <= HandleCount; i++)
             {
                 Canvas.FillRectangle(tbrush, GetHandleRectangle(i));
             }
@@ -96,11 +92,11 @@ namespace dPaint
         }
         public override bool PointInObject(Point p)
         {
-            bool ret = false;
+            var ret = false;
             float m = 0;
             if (ePoint.X - sPoint.X>0)
                 m = (ePoint.Y - sPoint.Y) / (ePoint.X - sPoint.X);
-            float b=sPoint.Y-(m*sPoint.X);
+            var b=sPoint.Y-(m*sPoint.X);
             if ((float)p.Y == ((m * p.X) + b)) ret = true;
             return ret;
         }

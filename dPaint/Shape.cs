@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 namespace dPaint
 {
-    public class ClsShape
+    public class Shape
     {
         /// <summary>
         /// shape color
@@ -27,7 +27,7 @@ namespace dPaint
                 return 0;
             }
         }
-        public ClsShape(Pen p,Graphics g)
+        public Shape(Pen p,Graphics g)
         {
             PenShape = p;
             Canvas = g;

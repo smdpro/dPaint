@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace dPaint
 {
-    public class ClsRhomboid : ClsRecangle
+    public class Rhomboid : Recangle
     {
-        public ClsRhomboid(Point startPoint,Point Endpoint,Pen pen,SolidBrush brush,Graphics g)
+        public Rhomboid(Point startPoint,Point Endpoint,Pen pen,SolidBrush brush,Graphics g)
             :base(startPoint,Endpoint,pen,brush,g)
         {
             rectangle.X = sPoint.X;
